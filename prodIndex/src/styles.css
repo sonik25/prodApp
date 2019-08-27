@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+
+.nav-link{
+    color: #555555;
+
+}
+ 
+.welcome-card{
+    border: 1px solid #007bff;
+}
