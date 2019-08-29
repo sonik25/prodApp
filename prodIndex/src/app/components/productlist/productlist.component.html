@@ -9,14 +9,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                  Filter by: 
-                              <input type="search" name="" id="search" class="form-control" placeholder="Search Here.." aria-describedby="helpId">
-                            </div>
-                        <table class="table">
+                           <app-filter></app-filter> 
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th><button type="button" class="btn btn-primary">Hide Image</button></th>
+                                    <th><button type="button" class="btn btn-primary"
+                                        (click)= "hide()"
+                                        >{{isHide ? 'Hide Image' : 'Show Image'}}</button>
+
+                                    </th>
                                     <th>Product Name</th>
                                     <th>Code</th>
                                     <th>Available</th>
@@ -25,10 +26,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td scope="row"></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr *ngFor ="let proData of prodData">
+                                    <td><img src="{{proData.productImage}}" class="prodimg img-fluid" alt=""
+                                        *ngIf="isHide"></td>
+                                    <td><a routerLink= "/product-details/{{ proData.productId }}"> {{proData.product}} </a></td>
+                                    <td>{{proData.code}}</td>
+                                    <td>{{proData.available}}</td>
+                                    <td>{{proData.price}}</td>
+                                    <td title='{{proData.rating}}'><app-ratings></app-ratings></td>
                                 </tr>                                
                             </tbody>
                         </table>

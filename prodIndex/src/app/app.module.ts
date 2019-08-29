@@ -7,7 +7,10 @@ import { routes} from './apps.routs';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { RatingsComponent } from './components/ratings/ratings.component'
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { HttpClientModule} from '@angular/common/http'
     NavigationComponent,
     HomeComponent,
     ProductlistComponent,
+    ProductDetailsComponent,
+    FilterComponent,
+    RatingsComponent,
   ],
   imports: [
     BrowserModule,

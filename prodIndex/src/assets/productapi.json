@@ -4,7 +4,7 @@
     "available":"Mar 19,2016",
     "price":25,
     "rating":5,
-    "productImage":"http://lorempixel.com/400/200/"
+    "productImage":"https://lorempixel.com/400/200/"
 },
 {
       "productId":2,
@@ -13,7 +13,7 @@
     "available":"April 19,2016",
     "price":25,
     "rating":4,
-    "productImage":"http://lorempixel.com/400/200/"
+    "productImage":"https://lorempixel.com/400/200/"
 },
 {
   "productId":3,
@@ -22,7 +22,7 @@
     "available":"Mar 19,2016",
     "price":25,
     "rating":3.5,
-      "productImage":"http://lorempixel.com/400/200/"
+      "productImage":"https://lorempixel.com/400/200/"
 },
 {
      "productId":4,
@@ -31,7 +31,7 @@
     "available":"Mar 19,2016",
      "price":25,
      "rating":4.1,
-      "productImage":"http://lorempixel.com/400/200/"
+      "productImage":"https://lorempixel.com/400/200/"
 },
 {
      "productId":5,
@@ -40,6 +40,6 @@
     "available":"Mar 19,2016",
     "price":25,
     "rating":4.2,
-      "productImage":"http://lorempixel.com/400/200/"
+      "productImage":"https://lorempixel.com/400/200/"
 }
 ]
