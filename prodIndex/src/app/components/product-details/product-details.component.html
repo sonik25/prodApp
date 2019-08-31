@@ -1,2 +1,49 @@
-<p>product-details works! {{ productId }}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+                <div class="card welcome-card">
+                        <div class="card-header bg-primary text-white">
+                            Product Details of {{prodDetails.id}}: {{prodDetails.product}}
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="{{prodDetails.productImage}}" class="img-fluid" alt="">
+                                    
+                                </div>
+                                <div class="col-md-9">
+                                    <h4>Product Name: {{prodDetails.product}}</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                                <p>Product Code:{{prodDetails.code}}</p>
+                                                <p>Availability: {{prodDetails.available}}</p>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                                <p>Price: ${{prodDetails.price}}</p>
+                                                <p>Ratings: {{prodDetails.rating}}</p>                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer text-muted">
+                            <a name="" id="" class="btn btn-primary" routerLink="/product" role="button">Back</a>
+                        </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- <p>product-details works! {{ productId }}</p>
+
+<p></p>
+<p>{{prodDetails.product}}</p>
+
+<p>{{prodDetails.code}}</p>
+<p>{{prodDetails.available}}</p> -->
 

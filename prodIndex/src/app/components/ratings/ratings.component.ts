@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter ,Output } from '@angular/core';
 import { ProductlistComponent} from '../productlist/productlist.component';
 
 @Component({
@@ -7,7 +7,10 @@ import { ProductlistComponent} from '../productlist/productlist.component';
   styleUrls: ['./ratings.component.css']
 })
 export class RatingsComponent implements OnInit {
-  public rate;
+  @Input() public rate;
+  @Output() public item = new EventEmitter();
+  public view:boolean = false;
+  
 
   constructor() { }
 
@@ -15,7 +18,8 @@ export class RatingsComponent implements OnInit {
   }
 
   public ShowRating(){
-    this.rate;
+      this.item.emit(this.rate);
+      this.view = true;
 
   }
 

@@ -10,7 +10,9 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
 import { HttpClientModule} from '@angular/common/http';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FilterComponent } from './components/filter/filter.component';
-import { RatingsComponent } from './components/ratings/ratings.component'
+import { RatingsComponent } from './components/ratings/ratings.component';
+import { FormsModule} from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipes';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { RatingsComponent } from './components/ratings/ratings.component'
     ProductDetailsComponent,
     FilterComponent,
     RatingsComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,5 +18,9 @@ export const routes:Route[]=[{
     path:'product-details/:id',
     component:ProductDetailsComponent
 
+},
+{
+    path:'contact',
+    loadChildren:'./contact/contact.module#ContactModule'
 }
 ]

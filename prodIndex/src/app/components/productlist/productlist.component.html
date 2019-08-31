@@ -1,15 +1,25 @@
 <!-- <p>productlist works!</p> -->
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-10">
             <div class="card welcome-card">
                 <div class="card-header bg-primary text-white">
-                    Product List
+                    Product List <span></span> <span>{{currentRating}}</span>
+
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                           <app-filter></app-filter> 
+                                <div class="form-group">
+    
+                                        Filter by: 
+                                    <input type="search" name="" id="search" class="form-control col-md-6" 
+                                        placeholder="Search Here.." name="search" [(ngModel)]="searchModel">
+                                    <p>filter by {{searchModel}}</p>
+                                    
+                                </div>
+                                    
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -26,14 +36,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor ="let proData of prodData">
+                                <tr *ngFor ="let proData of prodData  | searchData : searchModel">
                                     <td><img src="{{proData.productImage}}" class="prodimg img-fluid" alt=""
                                         *ngIf="isHide"></td>
                                     <td><a routerLink= "/product-details/{{ proData.productId }}"> {{proData.product}} </a></td>
                                     <td>{{proData.code}}</td>
                                     <td>{{proData.available}}</td>
                                     <td>{{proData.price}}</td>
-                                    <td title='{{proData.rating}}'><app-ratings></app-ratings></td>
+                                    <td title='{{proData.rating}}'>
+                                        <app-ratings [rate] = "proData.rating"  (item)="AddRating($event)"></app-ratings>
+                                    </td>
                                 </tr>                                
                             </tbody>
                         </table>

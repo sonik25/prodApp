@@ -10,6 +10,7 @@ import { IproductData } from '../../shared/model/productData';
 export class ProductlistComponent implements OnInit {
   public prodData:IproductData[];
   public isHide:boolean = true;
+  public currentRating;
 
   constructor(private el:ElementRef , private productServices:ProductServices) { }
 
@@ -33,6 +34,11 @@ export class ProductlistComponent implements OnInit {
        this.isHide = !this.isHide;
      }
 
+   }
+
+   AddRating(data){
+     this.currentRating = data;
+     this.currentRating = ': The new rating was ' + data 
    }
 
 }
