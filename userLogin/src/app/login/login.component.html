@@ -1,0 +1,41 @@
+<section class="login-sec">
+    <div class="container">
+        <h3 class="heading text-center text-white">Login Form</h3>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="account-wall">
+                    <div class="top-content">
+                        <img src="https://demo.w3layouts.com/demos_new/template_demo/14-02-2019/latest_login_form-demo_Free/1335508922/web/images/user.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                    </div>
+                    <form class="form-signin" [formGroup]= "Login" (ngSubmit)="Save(Login.value)">
+                            <div class="form-group input">
+                                <input type="text" class="form-control" placeholder="Username" 
+                                formControlName="UserName" 
+                                [class.is-valid]="Login.controls.UserName.valid"
+                                [class.is-invalid]="!Login.controls.UserName.valid && submitted"
+                                >
+                                <div class= "valid-feedback">Looks good !!</div>
+                                <div class="invalid-feedback">Please correct Username</div>
+                            </div>
+                            <div class="form-group input">
+                                <input type="password" class="form-control" placeholder="Password" 
+                                formControlName="Password"
+                                [class.is-valid]="Login.controls.Password.valid"
+                                [class.is-invalid]="!Login.controls.Password.valid && submitted"
+                                >
+                                <div class= "valid-feedback">Looks good !!</div>
+                                <div class="invalid-feedback">Incorrect Password</div>
+                                
+                            </div>
+                            <button class="btn sumbit" type="submit">
+                                    <span class="fa fa-sign-in"></span>
+                                    Login
+                            </button>
+                    </form>
+                    <a routerLink="/register" class="text-center new-account">Create an account </a>
+                </div>                
+            </div>
+        </div>
+        
+    </div>
+</section>    

@@ -1,0 +1,28 @@
+.reg-img{
+    
+    background:url(http://www.businessnewsdaily.com/images/i/000/007/874/original/free-business-plan-templates.jpg);
+    background-attachment:fixed;
+    background-size:cover;
+    min-height: 650px;
+    padding: 15px 0;
+    }
+
+.register-wal{
+    padding: 15px;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    -webkit-box-shadow: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.heading{
+    text-shadow: 2px 0px 5px #3f3f3f;
+}
+
+.register-wal input{
+    margin:10px 0;
+}
