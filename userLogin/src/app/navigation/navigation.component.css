@@ -1,0 +1,11 @@
+nav.navbar {
+    background: #1cc7d0;
+}
+
+nav.navbar a {
+    color:#fff;
+}
+
+img.logo-img {
+    width: 70px;
+}

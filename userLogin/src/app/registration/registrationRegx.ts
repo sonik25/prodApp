@@ -1,11 +1,11 @@
 export class RegistrationRegx {
     static FirstName(control){
-        let regx = /^[a-z]+$/;
+        let regx = /^[A-Za-z]+$/;
         let valid = regx.test(control.value);
         return valid ? null : {firstname:true}
     }
     static LastName(control){
-        let regx = /^[a-z]+$/;
+        let regx = /^[A-Za-z]+$/;
         let valid = regx.test(control.value);
         return valid ? null : {lastname:true}
     }
@@ -21,12 +21,12 @@ export class RegistrationRegx {
 
     }
     static Address(control){
-        let regx = /^[a-z\.0-9 ]+$/;
+        let regx = /^[A-Za-z\.0-9 ]+$/;
         let valid = regx.test(control.value);
         return valid ? null : {address:true}
     }
     static UserName(control){
-        let regx = /(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$/;
+        let regx = /^[a-zA-Z0-9]+([a-zA-Z0-9](_|-|.)[a-zA-Z0-9])*[a-zA-Z0-9]+$/;
         let valid = regx.test(control.value);
         return valid ? null : {username:true}
     }

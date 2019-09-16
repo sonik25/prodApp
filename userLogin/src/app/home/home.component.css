@@ -1,0 +1,26 @@
+section.slider {
+    background: url(https://www.kustomkartel.com/wp-content/uploads/2014/10/home-page-background-temp.jpg);
+    height: 500px;
+}
+
+.description{
+    position: absolute;
+    top: 30%;
+    margin: auto;
+    padding: 2em;
+    
+}
+.description h1{
+ color:#1cc7d0 ;
+}
+.description p{
+ color:rgb(255, 255, 255);
+ font-size: 20px;
+ width: 50%;
+ line-height: 1.5;
+}
+.description button{
+ border:1px  solid #1cc7d0;
+ background:#1cc7d0;
+ color:#fff;
+}

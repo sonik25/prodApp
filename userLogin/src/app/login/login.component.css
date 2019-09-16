@@ -9,10 +9,6 @@
     padding: 15px 0px;
 }
 
-.heading{
-    text-shadow: 2px 0px 5px #3f3f3f;
-}
-
 .account-wall {
     background: #fff;
     text-align: center;
@@ -47,10 +43,7 @@
     border-radius: 4px;
 }
 
-button.btn.sumbit {
-    background: #1cc7d0;
-    color: #fff;
-}
+
 
 a.new-account{
     color: #757474;

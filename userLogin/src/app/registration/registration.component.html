@@ -1,5 +1,5 @@
-<div class="overlay">
-        <div class="reg-img">
+<div class="reg-img">
+        <div class="overlay">
                 <h3 class="heading text-center text-white">Registration Form</h3>
                 <div class="container">
                 <div class="row">
@@ -73,6 +73,7 @@
                                 </div>
 
                                         <div formGroupName="UserLogin">
+                                                <div class="form-group">
                                                 <input type="text" class="form-control" placeholder="Enter Username" 
                                                 formControlName="UserName"
                                                 [class.is-valid]="Register.controls.UserLogin.controls.UserName.valid"
@@ -84,6 +85,8 @@
                                                         <div class="invalid-feedback">
                                                                 Please Enter Correct Username.
                                                         </div>
+                                                </div>
+                                                <div class="form-group">
                                                 <input type="password" class="form-control" placeholder="Enter Password" 
                                                 formControlName="Password"
                                                 [class.is-valid]="Register.controls.UserLogin.controls.Password.valid"
@@ -95,11 +98,14 @@
                                                         <div class="invalid-feedback">
                                                                 Please Enter Correct Password.
                                                         </div>
+                                                </div>
                                         </div>
-                                        
-                                        <button class="btn btn-lg btn-primary btn-block" type="submit">
-                                                Register
-                                        </button>
+                                        <div class="text-center">
+                                        <button class="btn sumbit" type="submit">
+                                                        <span class="fa fa-sign-in"></span>
+                                                        Register
+                                                </button>
+                                        </div>
                         </form>
                         </div>
                 </div>
