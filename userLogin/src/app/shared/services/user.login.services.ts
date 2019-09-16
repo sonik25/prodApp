@@ -21,5 +21,9 @@ export class UserLoginService{
             }
             return data;
         }))
+    };
+    userLogout(){
+        localStorage.removeItem('currentUser');
+        location.reload();
     }
 }

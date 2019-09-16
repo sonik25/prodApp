@@ -14,7 +14,9 @@
             <a class="nav-link" routerLink="">Contact Us</a>
         </li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-            <li><a class="nav-link" routerLink="/login"><span class="fa fa-sign-in"></span> login</a></li>
+    <ul class="nav navbar-right">
+            <li *ngIf="!userName"><a class="nav-link" routerLink="/login"><span class="fa fa-sign-in"></span> Login</a></li>
+            <li *ngIf="userName"><a class="nav-link">Welcome {{userName}}</a></li>
+            <li *ngIf="userName"><a class="nav-link" (click)="Logout()" style="cursor: pointer;"><span class="fa fa-sign-out"></span> Logout</a></li>
          </ul>
 </nav>
