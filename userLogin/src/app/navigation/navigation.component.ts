@@ -8,12 +8,16 @@ import { UserLoginService } from '../shared/services/user.login.services';
 })
 export class NavigationComponent implements OnInit {
   public userName;
+  //users:any = JSON.parse( localStorage.getItem('currentUser'));
+  // console.log(users); 
+  //  this.userName = users;
   constructor(private userServices:UserLoginService) { }
 
   ngOnInit() {
-    let users:any = JSON.parse( localStorage.getItem('currentUser'));
-    console.log(users); 
-    this.userName = users.FirstName + users.LastName;
+    this.userServices.currentUser.subscribe(item => {
+      this.userName = item;
+    })
+
   }
 
   Logout(){

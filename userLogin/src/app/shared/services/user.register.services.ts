@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient , HttpHeaders} from '@angular/common/http';
 import {IuserRegister} from '../model/userRegister';
+import { Observable, BehaviorSubject } from 'rxjs';
 @Injectable({providedIn:'root'})
 
 export class UserRegisterService{
@@ -10,8 +11,8 @@ export class UserRegisterService{
         this.header = new HttpHeaders({'Content-Type':'application/json'})
     }
 
-    userRegister(data:IuserRegister){
-        return this.http.post(this.registerEndpoint,JSON.stringify(data),{headers:this.header})
+    userRegister(data:IuserRegister):Observable<IuserRegister>{
+        return this.http.post<IuserRegister>(this.registerEndpoint,JSON.stringify(data),{headers:this.header})
 
     }
 
